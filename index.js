@@ -10,6 +10,9 @@ app.use(express.json())
 app.use(cors())
 
 //Custom Middlewares
+app.get('/', (req, res) => {
+    res.status(200).send('Hello')
+})
 app.use('/auth', require('./routes/authroute'))
 
 //error handler
